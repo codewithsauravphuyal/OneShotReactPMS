@@ -29,14 +29,14 @@ function Form({type,id}){
     const createProduct  = async (e)=>{
         e.preventDefault()
         if(type === "create"){
-            const response = await axios.post("https://66dc84a447d749b72acbc6e6.mockapi.io/products",data)
+            const response = await axios.post("https://66dc84af47d749b72acbc717.mockapi.io/products",data)
             if(response.status === 201){
                 navigate("/")
             }else{
                 alert("Create vayena, error aayo!")
             }
         }else{
-            const response = await axios.put("https://66dc84a447d749b72acbc6e6.mockapi.io/products/" +id,data)
+            const response = await axios.put("https://66dc84af47d749b72acbc717.mockapi.io/products" +id,data)
             if(response.status=== 200){
                 navigate("/product/"+id)
             }else{
