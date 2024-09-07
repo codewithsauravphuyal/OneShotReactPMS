@@ -8,14 +8,14 @@ function SingleProduct(){
     const [product,setProduct] = useState({})
     const navigate = useNavigate()
     const fetchProduct = async ()=>{
-       const response = await axios.get("https://66dc84a447d749b72acbc6e6.mockapi.io/products/" + id)
+       const response = await axios.get("https://66dc84af47d749b72acbc717.mockapi.io/products/" + id)
        if(response.status === 200){
         setProduct(response.data)
        }
     }
      
     const deleteMe = async ()=>{
-      const response =  await axios.delete("https://66dc84a447d749b72acbc6e6.mockapi.io/products/" + id)
+      const response =  await axios.delete("https://66dc84af47d749b72acbc717.mockapi.io/products/" + id)
       if(response.status === 200){
         navigate("/")
       }else{

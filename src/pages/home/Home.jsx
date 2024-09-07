@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 function Home(){
     const [products,setProducts] = useState([])
     const fetchProducts = async ()=>{
-       const response  = await axios.get('https://66dc84a447d749b72acbc6e6.mockapi.io/products')
+       const response  = await axios.get('https://66dc84af47d749b72acbc717.mockapi.io/products')
        if(response.status === 200){
         setProducts(response.data)
        }
